@@ -1,0 +1,29 @@
+= textractor_websocket 
+
+== Summary
+
+A plugin for https://github.com/Artikash/Textractor[Textractor] written in Rust that opens a WebSocket and sends captured text to all connected clients.
+
+Tested in Wine.
+
+== Build
+
+[source,sh]
+----
+# This builds both executable for testing and dynamic library
+cargo build
+----
+
+== Installation
+
+Copy compiled .dll to the Textractor directory and add it in the Extensions page.
+
+== Usage
+
+After installing the plugin, it will automatically start a server at link:ws://0.0.0.0:6677[]
+
+NOTE: Webserver starts lazily and ignores first two buffers, _viz._ Clipboard and Console.
+That means that you will have to select a buffer you wish to and capture at least 
+one line to start the server.
+
+You will also need a UI, here is an example you can use: https://github.com/sadolit/textractor-websocket-webui[Example]
