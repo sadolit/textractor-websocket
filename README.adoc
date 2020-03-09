@@ -6,6 +6,8 @@ A plugin for https://github.com/Artikash/Textractor[Textractor] written in Rust 
 
 Tested in Wine.
 
+image::screenshot.png[]
+
 == Build
 
 [source,sh]
